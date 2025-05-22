@@ -1,0 +1,15 @@
+DER: Binary format
+PEM: Base64 encoded text format with headers -> human readable
+PKCS: Base64 encoded binary format
+ASN.1 is abstract syntax notation is a standard that specifies data types and encodings of of those data types,
+Implementation is upto developers. 
+It specifies encodigs format such as xml, der, per
+
+DER: data is encode in type length value(TLV) element ,
+
+    TYPE utf8string -> 0x0c
+    LENGTH 5 -> 0x05
+    VALUE 'Hello' -> [0x48 0x65 0x6c 0x6c 0x6f]
+
+
+

@@ -1,0 +1,9 @@
+Compressing / Decompressing
+
+Purpose: Reduce data size for efficiency.
+
+    Compressing: Takes raw data and encodes it in a way that takes up less space (using algorithms like gzip, zlib, brotli, etc.).
+
+Decompressing: Restores the compressed data back to its original form.
+
+    Compression can be lossless (no data lost, e.g., ZIP, PNG) or lossy (some data lost for size, e.g., MP3, JPEG).
