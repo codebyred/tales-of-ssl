@@ -3,7 +3,7 @@ pub mod problem;
 pub mod utility;
 use anyhow::Context;
 use certificate::CertificateBuilder;
-use problem::{Problem, ProblemBuilder};
+use problem::ProblemBuilder;
 use std::{env, path::Path};
 
 #[tokio::main]

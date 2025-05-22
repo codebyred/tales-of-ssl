@@ -1,0 +1,29 @@
+In the Rust openssl crate:
+
+PKey	Stands for Envelope Public Key
+
+PKey<Private> — means it contains a private key, which also implies it has the public key part.
+
+PKey<Public> — contains only the public key.
+
+The full form of PKey in OpenSSL (and in the Rust openssl crate) is:
+
+    Private Key (or Public Key) — it's short for "EVP_PKEY", which stands for: 
+    
+    *Envelope Public Key*
+
+    EVP = Envelope — the high-level cryptographic API in OpenSSL.
+
+    PKEY = Public Key — can also contain the private key.
+
+    EVP_PKEY is a generic OpenSSL structure that can hold:
+
+        RSA keys (public or private)
+
+        EC keys
+
+        DSA keys
+
+        DH parameters
+
+        and more...

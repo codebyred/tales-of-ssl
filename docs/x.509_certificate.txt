@@ -1,0 +1,24 @@
+x.509 builder:
+    version: V3
+    subject: x.509 name
+    issuer: x.509 name
+    serial: ASN1 integer
+    not_before: ASN1 time
+    not_after: ASN1 time
+
+x.509 name: 
+    C: "United States"
+    CN: "domain.com"
+
+
+steps
+1. create to be signed(TBS) the certificate
+2. hash the TBS certificate with SHA:256(digest)
+3. sign with private key, verify using public key. why: to prove authenticity
+4. finally:
+
+x509 certificate {
+    tbs_certificate: { all the fields },
+    signature_algorithm: sha256WithRSAEncryption,
+    signature: sign(private_key, sha256(tbs_certificate))
+}
