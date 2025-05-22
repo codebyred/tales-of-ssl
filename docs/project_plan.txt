@@ -1,0 +1,5 @@
+run project
+fetch problem or read from file
+solve the problem
+submit the solution
+print the solution

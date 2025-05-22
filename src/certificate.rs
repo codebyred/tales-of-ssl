@@ -2,12 +2,17 @@ use anyhow::Context;
 use openssl::{asn1, base64, bn::BigNum, hash::MessageDigest, nid::Nid, pkey::PKey, rsa::Rsa, x509::{X509NameBuilder, X509}};
 use crate::{problem::Problem, utility::get_iso_country_name_from};
 
-pub struct Certificate;
+pub struct Certificate(String);
 
+impl Certificate {
+    pub fn get_value(&self) -> String {
+        self.0.clone()
+    }
+}
 pub struct CertificateBuilder;
 
 impl CertificateBuilder {
-    pub fn build(problem: Problem)-> anyhow::Result<()>{
+    pub fn build(problem: Problem)-> anyhow::Result<Certificate>{
 
         let key_der_format = base64::decode_block(&problem.private_key).context("decoding private key with base64 decoder")?;
         let rsa = Rsa::private_key_from_der(&key_der_format[..]).context("creating public key form der format key")?;
@@ -48,9 +53,7 @@ impl CertificateBuilder {
 
         let base64_der = base64::encode_block(&der[..]);
 
-        println!("{}", base64_der);
-
-        Ok(())
+        Ok(Certificate(base64_der))
 
     }
 }
