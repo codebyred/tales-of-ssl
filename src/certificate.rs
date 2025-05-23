@@ -53,7 +53,8 @@ impl CertificateBuilder {
             .set_pubkey(&pkey)
             .context("setting x.509 public key")?;
 
-        let serial_number = BigNum::from_hex_str(&problem.required_data.serial_number)
+        let serial_bytes =problem.required_data.serial_number.trim_start_matches("0x");
+        let serial_number = BigNum::from_hex_str(&serial_bytes)
             .context("converting big num from hex")?
             .to_asn1_integer()
             .context("converting bignum to to_asn1_integer")?;

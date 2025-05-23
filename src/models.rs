@@ -27,6 +27,10 @@ pub enum Feedback {
     Rejected {
         rejected: String,
     },
+    Submitted {
+        message: String,
+        hint: String
+    }
 }
 
 

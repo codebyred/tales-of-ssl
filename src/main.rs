@@ -69,7 +69,7 @@ async fn main() -> anyhow::Result<()> {
     progress_bar.finish_with_message("Feedback Received");
 
     match feedback {
-        Feedback::Success { success:_, message } => {
+        Feedback::Success { success, message } => {
             print!("succes ");
             if let Some(message) = message {
                 println!("{}", message)
@@ -78,6 +78,11 @@ async fn main() -> anyhow::Result<()> {
 
         Feedback::Rejected { rejected } => {
             println!("{}", rejected);
+        }
+
+        Feedback::Submitted { message, hint } => {
+            println!("{}", message);
+            println!("{}", hint);
         }
     }
 
