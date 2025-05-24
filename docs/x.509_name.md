@@ -1,15 +1,10 @@
-An X.509 Name (also called a Distinguished Name, or DN) is a structured set of attributes that uniquely identifies
+An X.509 Name (also called a Distinguished Name, or DN) is a structured set of attributes that uniquely identifies  
 an entity (like a person, organization, or server) in an X.509 certificate.
 
-It is used in digital certificates to describe who the certificate is for 
-    — such as the owner of a website's SSL certificate or the signer of a digital document.
+It is used in digital certificates to describe who the certificate is for  
+— such as the owner of a website's SSL certificate or the signer of a digital document.
 
-C=US
-ST=California
-L=San Francisco
-O=Example Corp
-OU=IT Department
-CN=example.com
+
 
 | Field                      | Description                  |
 | -------------------------- | ---------------------------- |
@@ -19,3 +14,4 @@ CN=example.com
 | `O` (Organization)         | `Example Corp`               |
 | `OU` (Organizational Unit) | `IT Department`              |
 | `CN` (Common Name)         | `example.com`                |
+

@@ -1,5 +1,8 @@
-ASN.1 is a standard interface description language used for defining data structures for serialization/deserialization 
-(commonly in cryptography, X.509 certificates, etc.).
+# ASN.1 Data Types
+
+ASN.1 (Abstract Syntax Notation One) is a standard interface description language used for defining data structures for serialization and deserialization. It is commonly used in areas such as cryptography and X.509 certificates.
+
+## Common ASN.1 Types
 
 | Type                         | Description                              |
 | ---------------------------- | ---------------------------------------- |
@@ -15,3 +18,4 @@ ASN.1 is a standard interface description language used for defining data struct
 | `UTCTime`, `GeneralizedTime` | Date/time formats                        |
 | `SEQUENCE`                   | Ordered list of elements                 |
 | `SET`                        | Unordered set of elements                |
+
